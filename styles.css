@@ -7,6 +7,52 @@ body {
     margin: 0;
     background-color: #000;
     color: #fff;
-    text-transform: lowercase;
     font-size: 3rem;
+}
+
+canvas {
+	cursor: crosshair;
+	display: block;
+    z-index: 5;
+}
+
+#until-next-year {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 10px;
+    color: #fff;
+}
+
+#countdown-container {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    font-size: 3rem;
+}
+
+#fireworks-text {
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+    z-index: 2;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%{
+        opacity: 0.5;
+    } 
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
 }
