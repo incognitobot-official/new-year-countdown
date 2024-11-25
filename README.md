@@ -1,4 +1,4 @@
-# new-year-countdown
+# New Year Countdown
 Counting down to the new year, with fireworks 🎆.
 
 > nothing happens when countdown reaches 0 lol...
