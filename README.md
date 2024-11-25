@@ -12,3 +12,5 @@ Counting down to the new year, with fireworks 🎆.
 - Customizable countdown time.
 - More effects.
 - Something special for when the countdown reaches 0...
+
+![alt preview](https://github.com/incognitobot-official/new-year-countdown/blob/main/preview.png?raw=true)
