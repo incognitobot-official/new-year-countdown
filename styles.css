@@ -16,7 +16,15 @@ canvas {
     z-index: 5;
 }
 
-#until-next-year {
+#next-year {
+    text-align: center;
+    font-size: 5rem;
+    margin-top: 10px;
+    color: #fff;
+    animation: rainbow 3s linear infinite;
+}
+
+#until {
     text-align: center;
     font-size: 2rem;
     margin-top: 10px;
@@ -35,24 +43,80 @@ canvas {
     font-size: 3rem;
 }
 
+#countdown-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+
+#countdown-timer div {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+#countdown-timer span {
+  margin-right: 0.3rem;
+}
+
+.fadeOutInText {
+  animation: fadeOutInText 1s ease-in-out;
+}
+
+@keyframes fadeOutInText {
+  0% {
+    color: red;
+    transform: translateY(-5px);
+  }
+  25% {
+    color: white;
+    transform: translateY(3px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    color: white;
+    transform: translateY(0px);
+  }
+}
+
+    
+
 #fireworks-text {
     position: absolute;
     bottom: 50px;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #fff;
     z-index: 2;
-    animation: blink 1s infinite;
+    animation: blink 1s ease-in-out infinite;
 }
 
 @keyframes blink {
     0%{
         opacity: 0.5;
+        font-size: 1.1rem;
     } 
     50% {
         opacity: 1;
+        font-size: 1.15rem;
     }
     100% {
         opacity: 0.5;
+        font-size: 1.1rem;
     }
 }
+
+@keyframes rainbow {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+  }
+  
