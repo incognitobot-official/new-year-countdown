@@ -12,8 +12,6 @@ Counting down to the new year, with fireworks 🎆.
 - Light/dark mode. (NEW)
 
 ## Coming soon:
-- Support for custom backgrounds/fonts
-- Customizable countdown time.
 - More effects.
 - Something special for when the countdown reaches 0...
 
