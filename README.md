@@ -1,7 +1,7 @@
 # New Year Countdown
 Counting down to the new year, with fireworks 🎆.
 
-> nothing happens when countdown reaches 0 lol...
+> Awesome fireworks display when the countdown reaches the new year...!
 
 ## Features:
 - Animated countdown timer.
