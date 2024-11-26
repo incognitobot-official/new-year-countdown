@@ -11,10 +11,10 @@ Counting down to the new year, with fireworks 🎆.
 - Customizable fonts. (NEW)
 - Customizable backgrounds. (NEW)
 - Light/dark mode. (NEW)
-- Fireworks barrage upon countdown ended
-- "HAPPY NEW YEAR" text upon countdown ended
-- Countdown tracks time correctly (will reset if date has passed)
-- Values are now hidden when not in use (ex. 00 hours, etc)
+- Fireworks barrage upon countdown ended (NEW)
+- "HAPPY NEW YEAR" text upon countdown ended (NEW)
+- Countdown tracks time correctly (will reset if date has passed) (NEW)
+- Values are now hidden when not in use (ex. 00 hours, etc) (NEW)
 
 ## Coming soon:
 - More effects.
