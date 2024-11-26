@@ -8,7 +8,14 @@ body {
     background-color: #000;
     color: #fff;
     font-size: 3rem;
+    text-shadow: 
+                0 0 40px currentColor,
+                0 0 25px currentColor;
 }
+
+body {
+  overflow: hidden; /* Hide scrollbars */
+  }
 
 canvas {
 	cursor: crosshair;
@@ -41,6 +48,8 @@ canvas {
     text-align: center;
     z-index: 2;
     font-size: 3rem;
+    font-size: 2rem; /* Adjust size as needed */
+    font-weight: bold;
 }
 
 #countdown-timer {
@@ -70,14 +79,14 @@ canvas {
     transform: translateY(-5px);
   }
   25% {
-    color: white;
+    color: currentColor;
     transform: translateY(3px);
   }
   50% {
     transform: translateY(0px);
   }
   100% {
-    color: white;
+    color: currentColor;
     transform: translateY(0px);
   }
 }
@@ -89,7 +98,6 @@ canvas {
     bottom: 50px;
     text-align: center;
     font-size: 1.1rem;
-    color: #fff;
     z-index: 2;
     animation: blink 1s ease-in-out infinite;
 }
@@ -118,5 +126,91 @@ canvas {
     71% { color: indigo; }
     85% { color: violet; }
     100% { color: red; }
+  }
+  
+  .customization-panel {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: 3%;
+    width: 30%;
+    background: rgba(147, 104, 184, 0.9);
+    opacity: 90%;
+    padding: 10px;
+    font-size: 0.75rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 11;
+  }
+  
+  
+  .customization-panel label {
+    margin-right: 5px;
+    font-size: 0.5rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .customization-panel select {
+    margin-bottom: 10px;
+    font-size: 0.5rem;
+    padding: 5px;
+  }
+  
+  .toggle-mode {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 11;
+  }
+  
+  #toggle-light-dark {
+    padding: 10px;
+    border: none;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #toggle-light-dark.light {
+    background: #fff;
+    color: #000;
+  }
+  
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+
+  #font-picker {
+    opacity: 0.8;
+  }
+
+  #background-picker {
+    opacity: 0.8;
+  }
+
+  body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay (adjust opacity as needed) */
+    pointer-events: none; /* Allows interaction with content underneath */
+    z-index: -1; /* Stays behind all content */
   }
   

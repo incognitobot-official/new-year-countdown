@@ -16,6 +16,36 @@
           </div>
         <div id="until"></div><div id="next-year"></div>
     </div>
+    <div class="customization-panel">
+        <label for="font-picker">Choose Font:</label>
+        <select id="font-picker">
+          <option value="'Arial', sans-serif">Arial</option>
+          <option value="'Courier New', monospace">Courier New</option>
+          <option value="'Georgia', serif">Georgia</option>
+          <option value="'Times New Roman', serif">Times New Roman</option>
+          <option value="'Verdana', sans-serif">Verdana</option>
+          <option value="'Comic Sans MS', cursive">Comic Sans MS</option>
+          <option value="'Tahoma', sans-serif">Tahoma</option>
+          <option value="'Lucida Console', monospace">Lucida Console</option>
+        </select>
+      
+        <label for="background-picker">Choose Background:</label>
+        <select id="background-picker">
+          <option value="none">None</option>
+          <option value="fireworks.jpg">Fireworks</option>
+          <option value="city-skyline.jpg">City Skyline</option>
+          <option value="grassy-field.jpg">Grassy Fields</option>
+          <option value="fourth-of-july.jpeg">Fourth of July</option>
+          <option value="birthday.jpg">Birthday</option>
+          <option value="subway.jpg">Subway</option>
+          <option value="home.jpg">Home</option>
+          <option value="night-sky.jpg">Night Sky</option>
+        </select>
+      </div>
+      
+      <div class="toggle-mode">
+        <button id="toggle-light-dark">Toggle Light/Dark Mode</button>
+      </div>      
     <canvas id="canvas"></canvas>
     <div id="fireworks-text">Click anywhere to launch fireworks!</div>
     <script src="script.js"></script>

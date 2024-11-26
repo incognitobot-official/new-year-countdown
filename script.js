@@ -245,3 +245,26 @@ window.onload = loop;
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Font Picker
+  const fontPicker = document.getElementById("font-picker");
+  fontPicker.addEventListener("change", (e) => {
+    document.body.style.fontFamily = e.target.value;
+  });
+
+  // Background Picker
+  const backgroundPicker = document.getElementById("background-picker");
+  backgroundPicker.addEventListener("change", (e) => {
+    document.body.style.backgroundImage = `url('assets/${e.target.value}')`;
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+  });
+
+  // Light/Dark Mode Toggle
+  const toggleButton = document.getElementById("toggle-light-dark");
+  toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    document.body.classList.toggle("light-mode");
+    toggleButton.classList.toggle("light");
+  });
+});
