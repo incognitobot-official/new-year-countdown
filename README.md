@@ -11,9 +11,12 @@ Counting down to the new year, with fireworks 🎆.
 - Customizable fonts. (NEW)
 - Customizable backgrounds. (NEW)
 - Light/dark mode. (NEW)
+- Fireworks barrage upon countdown ended
+- "HAPPY NEW YEAR" text upon countdown ended
+- Countdown tracks time correctly (will reset if date has passed)
+- Values are now hidden when not in use (ex. 00 hours, etc)
 
 ## Coming soon:
 - More effects.
-- Something special for when the countdown reaches 0...
 
 ![alt preview](https://github.com/incognitobot-official/new-year-countdown/blob/main/preview.png?raw=true)
