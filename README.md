@@ -6,8 +6,8 @@ Counting down to the new year, with fireworks 🎆.
 ## Features:
 - Animated countdown timer.
 - Rainbow year text.
-- Glowing text.
-- Fireworks effects.
+- Glowing text. (NEW)
+- Fireworks effects (on click).
 - Customizable fonts. (NEW)
 - Customizable backgrounds. (NEW)
 - Light/dark mode. (NEW)
