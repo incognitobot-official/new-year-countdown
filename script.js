@@ -1,4 +1,12 @@
-const targetDate = new Date('2024-12-31T23:59:59').getTime();
+const now = new Date();
+const thisYearTarget = new Date(now.getFullYear(), 11, 31, 23, 59, 59);
+
+let targetDate;
+if (now > thisYearTarget) {
+  targetDate = new Date(now.getFullYear() + 1, 11, 31, 23, 59, 59);
+} else {
+  targetDate = thisYearTarget;
+}
 
 const nextYear = new Date().getFullYear() + 1;
 document.getElementById('until').textContent = `until `;
@@ -9,12 +17,69 @@ let prevHours = 0;
 let prevMinutes = 0;
 let prevSeconds = 0;
 
+let newyear = false;
+
 function updateCountdown() {
   const now = new Date().getTime();
   const timeLeft = targetDate - now;
 
   if (timeLeft < 0) {
-    document.getElementById('countdown-timer').textContent = "Time's up!";
+    document.getElementById('countdown-timer').textContent = "HAPPY NEW YEAR!";
+	document.getElementById('until').remove();
+	document.getElementById('next-year').remove();
+	newyear = true;
+	const rainbowKeyframes = [
+		{
+		  color: 'red',
+		  transform: 'scale(1.2) rotate(0deg)', // Normal size, no tilt
+		  offset: 0
+		},
+		{
+		  color: 'orange',
+		  transform: 'scale(1) rotate(0deg)', // Slightly larger and tilted
+		  offset: 0.14
+		},
+		{
+		  color: 'yellow',
+		  transform: 'scale(1.2) rotate(5deg)', // Back to normal size, more tilt
+		  offset: 0.28
+		},
+		{
+		  color: 'green',
+		  transform: 'scale(1) rotate(10deg)', // Slightly larger, no tilt
+		  offset: 0.42
+		},
+		{
+		  color: 'blue',
+		  transform: 'scale(1.2) rotate(5deg)', // Normal size, tilted in opposite direction
+		  offset: 0.57
+		},
+		{
+		  color: 'indigo',
+		  transform: 'scale(1) rotate(0deg)', // Larger again, tilted
+		  offset: 0.71
+		},
+		{
+		  color: 'violet',
+		  transform: 'scale(1.2) rotate(-5deg)', // Back to normal size, no tilt
+		  offset: 0.85
+		},
+		{
+		  color: 'red',
+		  transform: 'scale(1.2) rotate(0deg)', // Full cycle back to original state
+		  offset: 1
+		}
+	  ];
+  
+	  // Define the animation options (duration, easing, infinite loop)
+	  const animationOptions = {
+		duration: 5000,  // 7 seconds for a full cycle
+		iterations: Infinity,  // Repeat the animation indefinitely
+		easing: 'linear',  // Smooth transition
+	  };
+  
+	  // Apply the animation to the element
+	  document.getElementById('countdown-timer').animate(rainbowKeyframes, animationOptions);
     return;
   }
 
@@ -39,6 +104,19 @@ function updateCountdown() {
   if (seconds !== prevSeconds) {
     updateElement('seconds', `${seconds} secs`);
     prevSeconds = seconds;
+  }
+
+  if (days == 0) {
+    updateElement('days', ``);
+    prevDays = days;
+  }
+  if (hours == 0) {
+    updateElement('hours', ``);
+    prevHours = hours;
+  }
+  if (minutes == 0) {
+    updateElement('minutes', ``);
+    prevMinutes = minutes;
   }
 }
 
@@ -214,6 +292,16 @@ function loop() {
 	while( i-- ) {
 		particles[ i ].draw();
 		particles[ i ].update( i );
+	}
+
+	if( timerTick >= 0 ) {
+		if( newyear ) {
+			// start the firework at the bottom middle of the screen, then set the random target coordinates, the random y coordinates will be set within the range of the top half of the screen
+			fireworks.push( new Firework( random( 0 , cw ), ch, random( 0, cw ), random( 0, ch * 3 / 4 ) ) );
+			timerTick = 0;
+		}
+	} else {
+		timerTick++;
 	}
 	
 	if( limiterTick >= limiterTotal ) {
